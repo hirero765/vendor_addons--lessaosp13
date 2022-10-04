@@ -17,43 +17,6 @@ include $(call all-subdir-makefiles,$(LOCAL_PATH))
 PRODUCT_PACKAGE_OVERLAYS += vendor/addons/overlay/common
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/addons/overlay/common
 
-# Fonts
-PRODUCT_PACKAGES += \
-    fonts_customization.xml \
-    FontAccuratistOverlay \
-    FontAclonicaOverlay \
-    FontAmaranteOverlay \
-    FontBariolOverlay \
-    FontCagliostroOverlay \
-    FontCoconOverlay \
-    FontComfortaaOverlay \
-    FontComicSansOverlay \
-    FontCoolstoryOverlay \
-    FontExotwoOverlay \
-    FontFifa2018Overlay \
-    FontGoogleSansOverlay \
-    FontGrandHotelOverlay \
-    FontHarmonySansOverlay \
-    FontLatoOverlay \
-    FontLGSmartGothicOverlay \
-    FontLinotteOverlay \
-    FontNokiaPureOverlay \
-    FontNunitoOverlay \
-    FontOneplusSansOverlay \
-    FontOneplusSlateOverlay \
-    FontOswaldOverlay \
-    FontQuandoOverlay \
-    FontRedressedOverlay \
-    FontReemKufiOverlay \
-    FontRobotoCondensedOverlay \
-    FontRosemaryOverlay \
-    FontRubikOverlay \
-    FontSamsungOneOverlay \
-    FontSonySketchOverlay \
-    FontStoropiaOverlay \
-    FontSurferOverlay \
-    FontUbuntuOverlay
-
 # Icon Packs
 PRODUCT_PACKAGES += \
     IconPackCircularAndroidOverlay \
@@ -166,9 +129,4 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AndroidBlackThemeOverlay \
 
-# Include {Lato,Rubik} fonts
-$(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
-$(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)
 
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/addons/prebuilt/product/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts)
